@@ -14,19 +14,19 @@ const userSchema = new Schema(
       unique: true,
       required: true,
       match: [
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        "Please use a valid email",
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+        "Please fill a valid email address",
       ],
     },
     thoughts: [
       {
-        type: mongoose.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Thought",
       },
     ],
     friends: [
       {
-        type: mongoose.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "User",
       },
     ],
