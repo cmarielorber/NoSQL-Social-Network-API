@@ -4,6 +4,8 @@ module.exports = {
   //Get all users
   getAllUsers(req, res) {
     User.find({})
+      .populate("thoughts")
+      .populate("friends")
       .then((user) => res.json(user))
       .catch((err) => res.status(500).json(err));
   },
@@ -76,11 +78,10 @@ module.exports = {
       { $pull: { friends: req.params.friendId } },
       { new: true }
     )
-      .then(
-        (user) =>
-          !user
-            ? res.status(404).json({ message: "No User find with this ID!" })
-            : res.json(user)
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No User find with this ID!" })
+          : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
   },
