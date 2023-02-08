@@ -14,7 +14,7 @@ module.exports = {
       .select("-__v")
       .then((thought) =>
         !thought
-          ? res.status(500).json({ message: "No Thought found with this ID!" })
+          ? res.status(500).json({ message: "No thought found with this ID!" })
           : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
@@ -58,7 +58,7 @@ module.exports = {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
-          ? res.status(500).json({ message: "No thought find with this ID!" })
+          ? res.status(500).json({ message: "No thought found with this ID!" })
           : User.findOneAndUpdate(
               { thoughts: req.params.thoughtId },
               { $pull: { thoughts: req.params.thoughtId } },
@@ -69,7 +69,7 @@ module.exports = {
         !user
           ? res
               .status(500)
-              .json({ message: "Thought deleted, but no user found" })
+              .json({ message: "Thought deleted but no user found" })
           : res.json({ message: "Thought successfully deleted" })
       )
       .catch((err) => res.status(500).json(err));
