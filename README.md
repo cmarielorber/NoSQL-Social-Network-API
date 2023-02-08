@@ -1,7 +1,7 @@
 # NoSQL-Social-Network-API
 Module 18 Challenge-NoSQL Challenge: Social Network API
 
-This project is an API for a social network web application where users can share thoughts, reactions, create a friends' list and react their friend's thoughts. I used `Express.js` to route, `MongoDB` for a database, `Mongoose` ODM, `Insomnia` to seed data, and `Moment.js` to create timestamps.
+This project is an API for a social network web application where users can share thoughts, reactions, create a friends' list and react their friend's thoughts. I used `Express.js` to route, `MongoDB` for a database, `Mongoose` Object Data Modeling library, `Insomnia` to seed data, and `Moment.js` to create timestamps.
 
 # Badges
 
