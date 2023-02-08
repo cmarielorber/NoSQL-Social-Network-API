@@ -3,6 +3,10 @@ Module 18 Challenge-NoSQL Challenge: Social Network API
 
 This project is an API for a social network web application where users can share thoughts, reactions, create a friends' list and react their friend's thoughts. I used `Express.js` to route, `MongoDB` for a database, `Mongoose` Object Data Modeling library, `Insomnia` to seed data, and `Moment.js` to create timestamps.
 
+# License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Badges
 
 <p>
@@ -15,20 +19,17 @@ This project is an API for a social network web application where users can shar
   <img src="https://img.shields.io/badge/-Node-red" />
 </p>
 
-# License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # Table of Contents
 
-- [Badges](#badges)
 - [License](#license)
+- [Badges](#badges)
 - [Screenshots](#screenshots)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation and Usage](#installation-and-usage)
+- [Tests](#tests)
 - [Technologies Used](#technologies-used)
 - [Project Link](#project-link)
-- [Contributing](#contributing)
+- [Contributing and Questions](#contributing-and-questions)
 
 # Screenshot DO THESE
 
@@ -76,6 +77,40 @@ Run the app with:
 ```
 nodemon server.js
 ```
+When the server is started, the Mongoose models are synched to the MongoDB database.
+Open MongoDB and connect to the MongoDB URI mongodb://localhost:27017. On the list of databases, click on usersDB to see thoughts and users data.
+To create seed data and test the API routes, use Insomnia. 
+
+# Tests
+Insomnia is used to test REST API calls. Please see the walk-through demonstration videos: https://drive.google.com/file/d/1MQ2WUP7RbTJPUuadVkVzzmjbWWJe8IWU/view as well as the sections on Description and Usage to see how data is added and tested using Insomnia.
+
+On Insomnia, the following API routes have been created and used to add, update, or remove users, friends, thoughts, and reactions in the user's database.
+
+📁 USER
+
+- Create a new user: POST /api/users
+- Get all users: GET /api/users
+- Get a single user by its id: GET /api/users/:userId
+- Update a user by its id: PUT /api/users/:userId
+- Delete a user by its id: DELETE /api/user/:userId
+
+📁 FRIEND
+
+- Add a new friend to a user's friend list: POST /api/users/:userid/friends/:friendId
+- Delete a friend from a user's friend list: DELETE /api/users/:userid/friends/:friendId
+
+📁 THOUGHT
+
+- Create a new thought: POST /api/thoughts/
+- Get all thoughts: GET /api/thoughts/
+- Get a single thought by its id: GET /api/thoughts/:thoughtId
+- Update a thought by its id: PUT /api/thoughts/:thoughtId
+- Delete a thought by its id: DELETE /api/thoughts/:thoughtId
+
+📁 REACTION
+
+- Create a reaction: POST /api/thoughts/:thoughtId/reactions
+- Delete a reaction by the reactionId: DEL /api/thoughts/:thoughtId/reactions/:reactionId
 
 # Technologies Used
 
@@ -92,10 +127,10 @@ nodemon server.js
 
 [NoSQL-Social-Network-API Demo](https://docs.google.com/presentation/d/15hSn8MMS_9yVPyyFyTjIasWqzz-44rC4soTjx3Zvu4k/edit?usp=sharing)
 
-# Contributing
+# Contributing and Questions
 
 * Pull requests are welcome. 
-* If you have any questions about this application, please feel free to contact me directly at: <a href="mailto: christenmlorber@gmail.com"> Gmail <img></a>.
+* If you have any questions about this application, please feel free to contact me directly at: <a href="mailto: christenmlorber@gmail.com"> Gmail<img></a>.
 
 [Top of Page](#NoSQL-Social-Network-API)
 
