@@ -129,7 +129,7 @@ On Insomnia, the following API routes have been created and used to add, update,
 
 [NoSQL-Social-Network-API](https://github.com/cmarielorber/NoSQL-Social-Network-API)
 
-[NoSQL-Social-Network-API Demo](https://docs.google.com/presentation/d/15hSn8MMS_9yVPyyFyTjIasWqzz-44rC4soTjx3Zvu4k/edit?usp=sharing)
+[NoSQL-Social-Network-API Demo](https://drive.google.com/file/d/16U3zYYxq0xzxKisYLnMeoSPAC18kv5Wp/view?usp=share_link)
 
 # Contributing and Questions
 
